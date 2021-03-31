@@ -1,0 +1,57 @@
+@import "./normalize.css";
+/* 获取根元素，也就是html */
+:root{
+    --color-text: #666;
+    --color-high-text: #ff5777;
+    --color-tint: #ff8198;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
+}
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Helvetica Neue",Hevetica,"微软雅黑";
+    user-select: none; /*禁止用户使用鼠标在页面上选中文字和图片*/
+    -webkit-tap-highlight-color: transparent;  /*tap点击，highlight背景高亮，color颜色，颜色数值调节*/
+    background: var(--color-background);
+    color: var(--color-text);
+    /* width: 100vw; */
+    /* overflow: hidden; */
+}
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+/* 清楚浮动 */
+.clear-fix::after{
+    clear:both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clear-fix{
+    zoom: 1;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/* html {
+    overflow-y: scroll;
+  } */
+  
+/* :root body {
+    position: absolute;
+  } */
+/* html,body{overflow:hidden;overflow-y:auto;} */
